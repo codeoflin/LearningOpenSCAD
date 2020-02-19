@@ -1,4 +1,3 @@
-// CSG.scad - Basic example of CSG usage
 //设定球半径
 sphere_radius=8;
 cube_lenght=15;
@@ -14,6 +13,7 @@ translate([-24,0,0]) {
 	}
 }
 
+//如果想插入的对象,在中心,可以不用translate
 //difference 差异运算符从另一个对象中减去一个对象，使其对创建孔和其他空间很有用。
 difference() {
 	cube(cube_lenght, center=true);
@@ -21,6 +21,7 @@ difference() {
 }
 	
 translate([24,0,0]) {
+ //intersection 交叉保留2个对象中交叉的部分
 	intersection()
 	{
 		cube(cube_lenght, center=true);
@@ -28,16 +29,4 @@ translate([24,0,0]) {
 	}
 }
 
-
-// */
-// echo(version=version());
-// Written by Marius Kintel <marius@kintel.net>
-//
-// To the extent possible under law, the author(s) have dedicated all
-// copyright and related and neighboring rights to this software to the
-// public domain worldwide. This software is distributed without any
-// warranty.
-//
-// You should have received a copy of the CC0 Public Domain
-// Dedication along with this software.
-// If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+echo(version=version());

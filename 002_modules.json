@@ -1,0 +1,9 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "scale": "3",
+            "show": "true"
+        }
+    },
+    "fileFormatVersion": "1"
+}
