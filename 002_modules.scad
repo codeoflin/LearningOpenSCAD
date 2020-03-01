@@ -6,6 +6,11 @@ scale=1;
 
 if (show)html();
 
+module mycylinder(h=10,r=10,center=true)
+{
+	linear_extrude(height = h, twist =0, scale = 1, center = center) circle(r=r,center=center);
+}
+
 module html(){
 	union()
 	{
@@ -24,7 +29,7 @@ module head(c1){
 
 module body(){
 	difference() {
-		rotate([90,0,0])cylinder(h=40*scale,r=20*scale, center=true);
+		rotate([90,0,0])mycylinder(h=40*scale,r=20*scale, center=true);
 		//加个文本
 		linear_extrude(height=scale*20, convexity=1)	text("L", size=scale*10,font="Bitstream Vera Sans",		halign="center",valign="center");
 	}
