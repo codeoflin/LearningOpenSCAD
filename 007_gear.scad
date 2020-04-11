@@ -3,7 +3,11 @@
 module tooth_2d(bodylen=100,bodywidth=50,headlen=30){
 	translate([0,-bodywidth/2,0])
 	{
-		polygon(points=[[0,0],[bodylen,0],[bodylen+headlen,bodywidth/2],[bodylen,bodywidth],[0,bodywidth]]);
+		polygon(points=[[0,0],
+        [bodylen,0],
+        [bodylen+headlen,bodywidth/2],
+        [bodylen,bodywidth],
+        [0,bodywidth]]);
 	}
 }
 
