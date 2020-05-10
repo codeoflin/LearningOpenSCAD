@@ -17,4 +17,5 @@ difference()
       cube([length-2*bevelRadius -1, width-2*bevelRadius-1,height/2],center=true);
     }
 }
-sphere(r=32);
+
+//sphere(r=32);
